@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origin Roleplay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Snow Effect Canvas -->
+    <canvas id="snow-canvas"></canvas>
+
+    <!-- Background Image -->
+    <div class="background-overlay">
+        <img src="https://i.imgur.com/fqWQp72.jpeg" alt="Background">
+    </div>
+
+    <!-- YouTube Music Player (Hidden) -->
+    <div id="youtube-player-container" style="display: none;">
+        <div id="youtube-player"></div>
+    </div>
+
+    <!-- Volume Control -->
+    <div id="volume-control" class="volume-control">
+        <button id="mute-btn" class="volume-btn">
+            <svg class="volume-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+        </button>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="200" value="30">
+        <span id="volume-value" class="volume-value">30%</span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo-section">
+                    <img src="https://i.imgur.com/h1ofY0p.png" alt="Origin Roleplay Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>Origin Roleplay</h1>
+                        <p>RESPECT AND GOOD ATTITUDE</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h2 class="hero-title">Selamat Datang di Origin Roleplay</h2>
+                <p class="hero-description">
+                    Bergabunglah dengan komunitas roleplay terbaik di Indonesia. Nikmati pengalaman bermain yang realistis dan menyenangkan bersama ratusan pemain lainnya.
+                </p>
+                <button class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </svg>
+                    <a href="http://discord.gg/bangmatt">
+                        Join Server Sekarang
+                    </a>
+                </button>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-card">
+                    <div class="section-header">
+                        <svg class="section-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <h2>About Us</h2>
+                    </div>
+                    <p class="about-text">
+                        Origin Roleplay adalah server FiveM yang berfokus pada pengalaman roleplay yang mendalam dan realistis. Kami menyediakan lingkungan bermain yang aman, adil, dan menyenangkan untuk semua pemain.
+                    </p>
+                    <p class="about-text">
+                        Dengan sistem ekonomi yang seimbang, pekerjaan yang beragam, dan komunitas yang ramah, Origin Roleplay adalah tempat yang sempurna untuk memulai petualangan roleplay Anda.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-card feature-blue">
+                            <div class="feature-title">Up to 64 Players</div>
+                            <p class="feature-desc">Menampung kurang lebih sebanyak 60+ warga aktif dikota.</p>
+                        </div>
+                        <div class="feature-card feature-purple">
+                            <div class="feature-title">Event Menarik</div>
+                            <p class="feature-desc">Meskipun kultur bermain-peran tetap aktif, tapi disini tidak ketinggalan event menarik lohhh.</p>
+                        </div>
+                        <div class="feature-card feature-pink">
+                            <div class="feature-title">Friendly Staff</div>
+                            <p class="feature-desc">Admin dan Superadmin akan membantumu cara bermain peran dikota ini dan Bersikap ramah.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Section -->
+        <section class="staff-section">
+            <div class="container">
+                <div class="section-header center">
+                    <svg class="section-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <h2>Tim Kami</h2>
+                </div>
+                <p class="section-subtitle">Kenali Admin/Superadmin yang selalu siap membantu Anda</p>
+
+                <div class="staff-grid">
+                    <!-- Founder -->
+                    <div class="staff-card" data-role="founder">
+                        <div class="staff-glow founder-glow"></div>
+                        <img src="https://i.imgur.com/qL8PU1A.png" alt="Jagad" class="staff-image">
+                        <h3 class="staff-name">Vanesh</h3>
+                        <div class="staff-role founder-role">Founder</div>
+                    </div>
+
+                    <div class="staff-card" data-role="founder">
+                        <div class="staff-glow founder-glow"></div>
+                        <img src="https://i.imgur.com/BVirQ54.png" alt="Matt" class="staff-image">
+                        <h3 class="staff-name">Matt</h3>
+                        <div class="staff-role founder-role">Founder</div>
+                    </div>
+
+                    <div class="staff-card" data-role="founder">
+                        <div class="staff-glow founder-glow"></div>
+                        <img src="https://i.imgur.com/WmmjmLg.png" alt="RF" class="staff-image">
+                        <h3 class="staff-name">RF</h3>
+                        <div class="staff-role founder-role">Founder</div>
+                    </div>
+
+                    <!-- Superadmin -->
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/bdOTyYA.png" alt="Origin - Pennywise" class="staff-image">
+                        <h3 class="staff-name">Origin - Pennywise</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/15Nt9yf.png" alt="Origin - Masky" class="staff-image">
+                        <h3 class="staff-name">Origin - Masky</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/5SjQ9OM.png" alt="Origin - Nio友" class="staff-image">
+                        <h3 class="staff-name">Origin - Nio友</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/qmgBvMI.png" alt="Origin - Rexxel" class="staff-image">
+                        <h3 class="staff-name">Origin - Rexxel</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/KdHuTtw.png" alt="Origin - GV666" class="staff-image">
+                        <h3 class="staff-name">Origin - GV666</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/UpSoPpG.png" alt="Origin - Jakk" class="staff-image">
+                        <h3 class="staff-name">Origin - Jakk</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/Wv0FVZR.png" alt="Origin - Kamzz" class="staff-image">
+                        <h3 class="staff-name">Origin - Kamzz</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/Jl6UmyX.png" alt="Origin - OJANFAVJ" class="staff-image">
+                        <h3 class="staff-name">Origin - OJANFAVJ</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/apswKS6.png" alt="Origin - Genou" class="staff-image">
+                        <h3 class="staff-name">Origin - Genou</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="superadmin">
+                        <div class="staff-glow superadmin-glow"></div>
+                        <img src="https://i.imgur.com/CHSqS0k.png" alt="Origin - XD" class="staff-image">
+                        <h3 class="staff-name">Origin - XD</h3>
+                        <div class="staff-role superadmin-role">Superadmin</div>
+                    </div>
+
+                    <!-- Admin -->
+                    <div class="staff-card" data-role="admin">
+                        <div class="staff-glow admin-glow"></div>
+                        <img src="https://i.imgur.com/byQP8Pi.png" alt="Admin" class="staff-image">
+                        <h3 class="staff-name">Admin</h3>
+                        <div class="staff-role admin-role">Admin</div>
+                    </div>
+
+                    <div class="staff-card" data-role="admin">
+                        <div class="staff-glow admin-glow"></div>
+                        <img src="https://i.imgur.com/byQP8Pi.png" alt="Admin" class="staff-image">
+                        <h3 class="staff-name">Admin</h3>
+                        <div class="staff-role admin-role">Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="staff-section">
+            <div class="container">
+                <div class="section-header center">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M6 8h.01"></path>
+                        <path d="M6 16h.01"></path>
+                        <path d="M18 8h.01"></path>
+                        <path d="M18 16h.01"></path>
+                    </svg>
+                    <h2>DONATORS</h2>
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <rect width="24" height="12" y="0" fill="#FF0000" />
+                        <rect width="24" height="12" y="12" fill="#FFFFFF" />
+                    </svg>
+                </div>
+                <p class="section-subtitle">Terimakasih para donatorsku, semoga Kota Origin tetap Jaya!</p>
+
+                <div class="staff-grid">
+                    <!-- Donator-->
+                    <div class="staff-card" data-role="admin">
+                        <div class="staff-glow vip-glow"></div>
+                        <img src="https://i.imgur.com/byQP8Pi.png" alt="Admin" class="staff-image">
+                        <h3 class="staff-name">VIP ✦Indra Kenz</h3>
+                        <div class="staff-role vip-role">VIP</div>
+                    </div>
+
+                    <div class="staff-card" data-role="admin">
+                        <div class="staff-glow vip-glow"></div>
+                        <img src="https://i.imgur.com/byQP8Pi.png" alt="Admin" class="staff-image">
+                        <h3 class="staff-name">VIP ✦Doni Salmanan</h3>
+                        <div class="staff-role vip-role">VIP</div>
+                    </div>
+
+                    <div class="staff-card" data-role="admin">
+                        <div class="staff-glow vip-glow"></div>
+                        <img src="https://i.imgur.com/byQP8Pi.png" alt="Admin" class="staff-image">
+                        <h3 class="staff-name">VIP ✦Timothy Ronald</h3>
+                        <div class="staff-role vip-role">VIP</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Server Info Section -->
+        <section class="server-info-section">
+            <div class="container">
+                <div class="server-info-card">
+                    <h2 class="server-info-title">Informasi Server</h2>
+                    <div class="server-info-list">
+                        <div class="server-info-item">
+                            <p class="server-info-label">Server IP</p>
+                            <p class="server-info-value" id="server-ip">Coming soon ya sayang!</p>
+                        </div>
+                        <div class="server-info-item">
+                            <p class="server-info-label">Discord</p>
+                            <p class="server-info-value">discord.gg/yqh6HQKC4M</p>
+                        </div>
+                        <div class="server-info-item">
+                            <p class="server-info-label">Website</p>
+                            <p class="server-info-value">https://bit.ly/OGRPID</p>
+                        </div>
+                    </div>
+                    <button class="btn-copy" id="copy-ip-btn">Copy Server IP</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025 Origin Roleplay. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
